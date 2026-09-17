@@ -6,7 +6,7 @@ resource "aws_vpc" "this" {
   enable_dns_hostnames = true
 
   assign_generated_ipv6_cidr_block     = false
-  enable_network_address_usage_metrics = fasle
+  enable_network_address_usage_metrics = false
 
   tags = {
     Name = "rladmswlr-test-vpc"
