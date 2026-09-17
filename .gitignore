@@ -1,5 +1,10 @@
-.terraform/
-*.tfstate
-*.tfstate.*
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate
+
+build/
+dist/
+*.egg-info
+
 crash.log
 crash.*.log
