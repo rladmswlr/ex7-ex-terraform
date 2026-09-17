@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'infra/project/**'
 
 permissions:
   contents: read
@@ -50,4 +52,5 @@ jobs:
 
       # 3-7 인프라 반영 (Apply / Destroy)
       - name: Terraform Apply & Destory
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: terraform apply --auto-approve
